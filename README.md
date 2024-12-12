@@ -310,7 +310,13 @@ go get k8s.io/kube-state-metrics
 
 #### Building the Docker container
 
-Simply run the following command in this root folder, which will create a
+Install `gomplate` at the version used in `go.mod`.
+
+```
+go install github.com/hairyhenderson/gomplate/v3/cmd/gomplate@v3.11.8
+```
+
+Then run the following command in this root folder, which will create a
 self-contained, statically-linked binary and build a Docker image:
 
 ```

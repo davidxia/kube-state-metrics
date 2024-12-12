@@ -445,6 +445,7 @@ func less(a, b map[string]string) bool {
 }
 
 func (c compiledGauge) value(it interface{}) (*eachValue, error) {
+	fmt.Printf("it %+v\n", it)
 	labels := make(map[string]string)
 	got := c.ValueFrom.Get(it)
 	// If `valueFrom` was not resolved, respect `NilIsZero` and return.
